@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>
+        I'm the master 
+    </title>
+    <style>
+        body{
+            background-color:black; 
+            color:white;
+        }
+    </style>
+
+ </head>
+ <body>
+     <h1>Tu peso en otro planeta</h1>
+     <p>En la tierra pesas distinto que en Marte o Jupiter</p>
+     <script>
+        var g_Earth=9.8;
+        var g_Mars=3.7;
+        var g_Jupiter=24.8;
+        var weight_user=parseFloat(prompt("What's your weight?"));
+        var selected_place=prompt("Select one planet\n -Jupiter or Mars").toLowerCase()
+
+        if(selected_place=="mars"){
+            var weight_final=(weight_user*g_Mars)/g_Earth;
+        }  else if(selected_place=="jupiter"){
+            var weight_final=(weight_user*g_Jupiter)/g_Earth;
+        }  else {
+            alert(`La cadena que escribio no está entre nuestras opciones`);
+        }
+        document.write(`Tu peso en <strong>${selected_place}</strong> es <strong>${Math.round(weight_final)} Kg</strong>.`);
+     </script>
+ </body>
+</html>
